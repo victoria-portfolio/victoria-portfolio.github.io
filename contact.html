@@ -8,13 +8,12 @@
         <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway" rel="stylesheet">
         <script src="main.js"></script>
-        <script src='./form-submission-handler.js'></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
-</head>
-<body>
-    <header>
-        <div class="title">
-            <h1>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h1>
                 Victoria Luisi
             </h1>
             <p class="subtitle">
@@ -35,44 +34,50 @@
         <p>Questions? Let me know!</p>
         <div class="container">
             <form autocomplete="on" class="gform contact" action="https://script.google.com/macros/s/AKfycbw3w3pqhtkujpSehk5bkFNKLXa0Is2IfI21eVGAqAhu0-aL4CBQ/exec" method="POST">
+                <label class="sr-only"></label>
+                <input id="honeypot" type="text" name="honeypot" value="" />
+
                 <legend class="full-width">Name</legend>
-                    <label>
+                <label>
                         <input class="input" 
-                               type="text" 
-                               x-autocompletetype="given-name" 
-                               name="first name" 
+                        type="text" 
+                        x-autocompletetype="given-name" 
+                        name="first name" 
                                id="firstName"
                                required>
-                        <p>First Name</p>
+                               <p>First Name</p>
                     </label>
                     <label>
                         <input class="input" 
-                               type="text" 
-                               x-autocompletetype="surname" 
+                        type="text" 
+                        x-autocompletetype="surname" 
                                name="last name" 
                                id="lastName">
-                        <p>Last Name</p>
+                               <p>Last Name</p>
                     </label>
                     
                 
-                <div class="full-width">
-                    <legend>Email Address</legend>
+                    <div class="full-width">
+                        <legend>Email Address</legend>
                     <input class="input full-width" name="email" id="email" x-autocompletetype="email" type="email" required>
                 </div>
                 <div class="full-width">
                     <legend>Message</legend>
                     <textarea rows="5" name="message" id="message" class="input full-width"></textarea>
                 </div>
-                <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div>
+                <!-- <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div> -->
                 <div>
                     <button type="submit">Submit</button>
                 </div>
-
+                <div class="thankyou_message" style="display:none;">
+                    <h2>Thank you for reaching out!</h2>
+                </div>
             </form>
         </div>
     </main>
     <footer>
-
+        
+        <script src='./form-submission-handler.js'></script>
     </footer>
 </body>
 </html>

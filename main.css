@@ -222,3 +222,7 @@ button:active {
 .input:active {
     background: white;
 }
+
+#honeypot {
+  display: none;
+}
