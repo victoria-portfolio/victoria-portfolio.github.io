@@ -34,45 +34,48 @@
         <p>Questions? Let me know!</p>
         <div class="container">
             <form autocomplete="on" class="gform contact" action="https://script.google.com/macros/s/AKfycbw3w3pqhtkujpSehk5bkFNKLXa0Is2IfI21eVGAqAhu0-aL4CBQ/exec" method="POST">
-                <label class="sr-only"></label>
-                <input id="honeypot" type="text" name="honeypot" value="" />
-
-                <legend class="full-width">Name</legend>
-                <label>
-                        <input class="input" 
-                        type="text" 
-                        x-autocompletetype="given-name" 
-                        name="first name" 
-                               id="firstName"
-                               required>
-                               <p>First Name</p>
-                    </label>
+                <div class="form">    <!-- Simple SPAM control. -->
+                    <label class="sr-only"></label>
+                    <input id="honeypot" type="text" name="honeypot" value="" />
+                    <!-- Start of form -->
+                    <legend class="full-width">Name</legend>
                     <label>
-                        <input class="input" 
-                        type="text" 
-                        x-autocompletetype="surname" 
-                               name="last name" 
-                               id="lastName">
-                               <p>Last Name</p>
-                    </label>
+                            <input class="input" 
+                            type="text" 
+                            x-autocompletetype="given-name" 
+                            name="first name" 
+                                id="firstName"
+                                required>
+                                <p>First Name</p>
+                        </label>
+                        <label>
+                            <input class="input" 
+                            type="text" 
+                            x-autocompletetype="surname" 
+                                name="last name" 
+                                id="lastName">
+                                <p>Last Name</p>
+                        </label>
+                        
                     
-                
+                        <div class="full-width">
+                            <legend>Email Address</legend>
+                        <input class="input full-width" name="email" id="email" x-autocompletetype="email" type="email" required>
+                    </div>
                     <div class="full-width">
-                        <legend>Email Address</legend>
-                    <input class="input full-width" name="email" id="email" x-autocompletetype="email" type="email" required>
+                        <legend>Message</legend>
+                        <textarea rows="5" name="message" id="message" class="input full-width"></textarea>
+                    </div>
+                    <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
                 </div>
-                <div class="full-width">
-                    <legend>Message</legend>
-                    <textarea rows="5" name="message" id="message" class="input full-width"></textarea>
-                </div>
-                <!-- <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div> -->
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
-                <div class="thankyou_message" style="display:none;">
-                    <h2>Thank you for reaching out!</h2>
+                <div class="thankyou" style="display:none;">
+                    <h2>Thanks!</h2> <p>I appreciate you reaching out. Expect a reply soon!</p>
                 </div>
             </form>
+
         </div>
     </main>
     <footer>
