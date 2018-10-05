@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contact - Victoria Luisi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway" rel="stylesheet">
-    <script src="main.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact - Victoria Luisi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway" rel="stylesheet">
+        <script src="main.js"></script>
+        <script src='./form-submission-handler.js'></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <header>
@@ -61,18 +63,15 @@
                     <legend>Message</legend>
                     <textarea rows="5" name="message" id="message" class="input full-width"></textarea>
                 </div>
+                <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div>
                 <div>
                     <button type="submit">Submit</button>
                 </div>
-                
-                <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div>
 
             </form>
         </div>
     </main>
     <footer>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script src='./form-submission-handler.js'></script>
 
     </footer>
 </body>
