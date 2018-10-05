@@ -9,6 +9,11 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway" rel="stylesheet">
         <script src="main.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+        </script>
     </head>
     <body>
         <header>
@@ -66,12 +71,12 @@
                         <legend>Message</legend>
                         <textarea rows="5" name="message" id="message" class="input full-width"></textarea>
                     </div>
-                    <div class="g-recaptcha full-width" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY"></div>
+
                     <div>
-                        <button type="submit">Submit</button>
+                        <button type='submit' class="g-recaptcha" data-sitekey="6LcatHMUAAAAAH4vlE20NoyvCdIZsEO5i9f2WXpY" data-callback='onSubmit'>Submit</button>
                     </div>
                 </div>
-                <div class="thankyou" style="display:none;">
+                <div class="thankyou" style="display:none">
                     <h2>Thanks!</h2> <p>I appreciate you reaching out. Expect a reply soon!</p>
                 </div>
             </form>
