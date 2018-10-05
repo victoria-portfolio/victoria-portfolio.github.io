@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact - Victoria Luisi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>
+                Victoria Luisi
+            </h1>
+            <p class="subtitle">
+                Freelance Writer, Communications Pro, Dog Person, Plus Size Lady, Avid Reader, Outdoors Enthusiast
+            </p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Me</h2>
+        <p>Questions? Let me know!</p>
+        <div class="container">
+            <form autocomplete="on" class="contact" action="POST" method="POST">
+                <legend class="full-width">Name</legend>
+                    <label>
+                        <input class="input" 
+                               type="text" 
+                               x-autocompletetype="given-name" 
+                               name="first name" 
+                               id="firstName"
+                               required>
+                        <p>First Name</p>
+                    </label>
+                    <label>
+                        <input class="input" 
+                               type="text" 
+                               x-autocompletetype="surname" 
+                               name="last name" 
+                               id="lastName" 
+                               required>
+                        <p>Last Name</p>
+                    </label>
+                    
+                
+                <div class="full-width">
+                    <legend>Email Address</legend>
+                    <input class="input full-width" name="email" x-autocompletetype="email" type="email">
+                </div>
+                <div class="full-width">
+                    <legend>Message</legend>
+                    <textarea rows="5" class="input full-width"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

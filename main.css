@@ -1,0 +1,224 @@
+:root {
+    --green: #2ECC40;
+    --red: #FF4136;
+    --black: #111111;
+    --gray: #AAAAAA;
+    --light-gray: #fafafa;
+}
+
+/*----------------------------
+**********  TO-DO:  ********** 
+    media queries
+    style for articles
+    style for blogs
+----------------------------*/
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+main {
+    margin: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li {
+    margin: 2rem;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+nav ul li a:hover {
+    border-bottom: .25rem solid var(--green);
+    color: var(--black);
+}
+
+section {
+    margin-top: 1em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.full-width {
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+footer {
+    text-align: center;
+}
+
+.title {
+    margin: 1rem 0;
+    font-size: 1.5em;
+}
+
+.subtitle {
+    color: var(--gray);
+    font-size: 12px;
+    margin: 0;
+}
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+}
+
+img.work {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+section.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1.5rem;
+}
+
+img.about {
+    width: 100%;
+    object-fit: cover;
+}
+
+header.post {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/work-post-1.jpg);
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+}
+
+header h1.post {
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+article.work {
+    display: block;
+}
+
+article.post {
+    margin: 2rem 5rem;
+}
+
+article.about {
+
+}
+
+/* FORM STYLES */
+
+form {
+    margin: 1vh 3vw;
+    max-width: 500px;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 1em;
+}
+
+legend {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin: 1rem 0 .25rem 0;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+}
+
+label p {
+    color: var(--gray);
+    font-size: .8em;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background: none;
+    border: .1rem solid var(--gray);
+    border-radius: 500px;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase; 
+}
+
+button:hover {
+    color: white;
+    border: .1rem solid var(--green);
+    background: var(--green);
+}
+
+button:active {
+    color: white;
+    background-color: blue; 
+}
+
+.input {
+    border: .1rem solid var(--gray); 
+    border-radius: 2.5px;
+    background: var(--light-gray);
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.input:focus,
+.input:active {
+    background: white;
+}
